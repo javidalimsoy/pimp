@@ -54,8 +54,8 @@ nav a:hover {
     height: 500px;
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Align text to the right */
-    padding-right: 50px; /* Space from the right edge */
+    justify-content: flex-end;
+    padding-right: 50px;
     color: #fff;
     text-align: right;
 }
@@ -104,33 +104,29 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Featured Products */
+/* Featured Products Section */
 .featured-products {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between; /* Ensures equal spacing between items */
     gap: 20px;
-    justify-content: center;
 }
 
 .featured-product {
     text-align: center;
-    background: #f9f9f9;
-    padding: 15px;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
     border-radius: 10px;
-    transition: transform 0.3s ease;
-    width: calc(25% - 20px); /* Four products per row with space between */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Ensures exactly 3 products fit in one row */
     box-sizing: border-box;
 }
 
 .featured-product img {
     max-width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
-}
-
-.featured-product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .featured-product h3 {
@@ -140,48 +136,112 @@ nav a:hover {
 
 .featured-product p {
     font-size: 1rem;
-    color: #444;
+    color: #555;
 }
 
-/* Table Styles (Cart, Order History, etc.) */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+.featured-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-table th, table td {
-    padding: 10px;
-    text-align: left;
+/* Product Grid for products.php */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the grid */
+}
+
+.product-card {
+    background: #fff;
     border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(45% - 20px); /* Two products per row */
+    box-sizing: border-box;
 }
 
-table th {
-    background-color: #f8f8f8;
-    font-weight: bold;
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-/* Buttons */
-button {
+.product-card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product-card button {
     padding: 10px 20px;
     background-color: #000;
     color: #fff;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+.product-card button:hover {
     background-color: #444;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 15px 0;
+/* Responsive Design for Featured Products */
+@media (max-width: 768px) {
+    .featured-products {
+        flex-wrap: wrap; /* Allow items to wrap */
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .featured-product {
+        width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-product {
+        width: calc(100% - 20px); /* One item per row on mobile screens */
+    }
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
     background-color: #000;
     color: #fff;
-    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #444;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
