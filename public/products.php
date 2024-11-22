@@ -36,7 +36,9 @@ include '../src/db.php'; ?>
         }
         ?>
     </div>
+    <a href="index.php"><button type="button">Back to Home</button></a>
 </div>
+
 <footer>
     Rolex Shop Honeypot | All Rights Reserved
 </footer>

@@ -68,6 +68,8 @@ foreach ($cart_items as $item) {
     <?php else: ?>
         <p>Your cart is empty.</p>
         <a href="products.php"><button>Browse Products</button></a>
+        <a href="products.php"><button type="button">Back to Products</button></a>
+
     <?php endif; ?>
 </div>
 <footer>

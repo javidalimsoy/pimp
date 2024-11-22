@@ -87,6 +87,29 @@ table th, table td {
     border: 1px solid #ddd;
 }
 
+.order {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.order h3 {
+    margin-top: 0;
+}
+
+.order ul {
+    list-style: none;
+    padding: 0;
+}
+
+.order ul li {
+    margin-bottom: 5px;
+}
+
+
 /* Footer */
 footer {
     text-align: center;
@@ -97,3 +120,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+

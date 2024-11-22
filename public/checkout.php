@@ -10,7 +10,10 @@ $session_id = $_SESSION['session_id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $customer_name = $_POST['customer_name'];
+    $phone = $_POST['phone'];
+    $email = $_POST['email'];
     $address = $_POST['address'];
+    $delivery_notes = $_POST['delivery_notes'];
 
     // Calculate total
     $stmt = $conn->prepare("
@@ -29,13 +32,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Insert into orders
     $stmt = $conn->prepare("
-        INSERT INTO orders (session_id, customer_name, address, total) 
-        VALUES (:session_id, :customer_name, :address, :total)
+        INSERT INTO orders (session_id, customer_name, phone, email, address, delivery_notes, total) 
+        VALUES (:session_id, :customer_name, :phone, :email, :address, :delivery_notes, :total)
     ");
     $stmt->execute([
         'session_id' => $session_id,
         'customer_name' => $customer_name,
+        'phone' => $phone,
+        'email' => $email,
         'address' => $address,
+        'delivery_notes' => $delivery_notes,
         'total' => $total
     ]);
     $order_id = $conn->lastInsertId();
@@ -79,10 +85,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="customer_name">Full Name:</label>
         <input type="text" name="customer_name" id="customer_name" required>
 
-        <label for="address">Address:</label>
+        <label for="phone">Phone Number:</label>
+        <input type="text" name="phone" id="phone" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="address">Delivery Address:</label>
         <textarea name="address" id="address" rows="3" required></textarea>
 
-        <button type="submit">Place Order</button>
+        <label for="delivery_notes">Delivery Notes:</label>
+        <textarea name="delivery_notes" id="delivery_notes" rows="3"></textarea>
+
+        <div>
+            <a href="cart.php"><button type="button">Back to Cart</button></a>
+            <button type="submit">Place Order</button>
+        </div>
     </form>
 </div>
 <footer>

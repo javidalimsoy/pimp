@@ -1,5 +1,4 @@
 <?php
-global $conn;
 session_start();
 include '../src/db.php';
 
@@ -30,8 +29,11 @@ $order_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <p>Your order has been placed successfully.</p>
     <h3>Order Details:</h3>
     <p><strong>Order ID:</strong> <?= $order['id'] ?></p>
-    <p><strong>Total:</strong> $<?= number_format($order['total'], 2) ?></p>
+    <p><strong>Phone:</strong> <?= htmlspecialchars($order['phone']) ?></p>
+    <p><strong>Email:</strong> <?= htmlspecialchars($order['email']) ?></p>
     <p><strong>Address:</strong> <?= htmlspecialchars($order['address']) ?></p>
+    <p><strong>Delivery Notes:</strong> <?= htmlspecialchars($order['delivery_notes']) ?></p>
+    <p><strong>Total:</strong> $<?= number_format($order['total'], 2) ?></p>
 
     <h3>Items:</h3>
     <ul>
@@ -39,7 +41,7 @@ $order_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <li><?= $item['product_name'] ?> (x<?= $item['quantity'] ?>) - $<?= number_format($item['price'], 2) ?></li>
         <?php endforeach; ?>
     </ul>
-    <a href="index.php"><button>Return Home</button></a>
+    <a href="index.php"><button type="button">Return Home</button></a>
 </div>
 <footer>
     Rolex Shop Honeypot | All Rights Reserved

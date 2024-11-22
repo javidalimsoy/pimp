@@ -14,7 +14,9 @@
     <a href="index.php">Home</a>
     <a href="products.php">Products</a>
     <a href="cart.php">Cart</a>
+    <a href="order_history.php">Order History</a>
 </nav>
+
 <div class="container">
     <h2>Discover Luxury Watches</h2>
     <p>Browse our collection of Rolex watches.</p>
