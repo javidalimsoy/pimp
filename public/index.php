@@ -8,21 +8,45 @@
 </head>
 <body>
 <header>
-    <h1>Welcome to the Rolex Shop</h1>
-</header>
-<nav>
-    <a href="index.php">Home</a>
-    <a href="products.php">Products</a>
-    <a href="cart.php">Cart</a>
-    <a href="order_history.php">Order History</a>
-</nav>
+    <nav>
+        <a href="index.php">Home</a>
+        <a href="products.php">Products</a>
+        <a href="cart.php">Cart</a>
+        <a href="order_history.php">Order History</a>
+        <a href="login.php" class="auth-button">Login</a>
+        <a href="register.php" class="auth-button">Register</a>
+    </nav>
 
+</header>
+<div class="hero">
+    <div class="hero-text">
+        <h1>Rolex: Timeless Elegance</h1>
+        <p>Discover luxury and precision in every second.</p>
+        <a href="products.php" class="cta-button">Shop Now</a>
+    </div>
+</div>
 <div class="container">
-    <h2>Discover Luxury Watches</h2>
-    <p>Browse our collection of Rolex watches.</p>
+    <h2>Featured Collections</h2>
+    <div class="featured-products">
+        <div class="featured-product">
+            <img src="images/president.png" alt="Rolex President">
+            <h3>Rolex President</h3>
+            <p>$35,000</p>
+        </div>
+        <div class="featured-product">
+            <img src="images/gmt_master.png" alt="Rolex GMT Master">
+            <h3>Rolex GMT Master</h3>
+            <p>$12,000</p>
+        </div>
+        <div class="featured-product">
+            <img src="images/submariner.png" alt="Rolex Submariner">
+            <h3>Rolex Submariner</h3>
+            <p>$9,000</p>
+        </div>
+    </div>
 </div>
 <footer>
-    Rolex Shop Honeypot | All Rights Reserved
+    <p>Rolex Shop Honeypot | All Rights Reserved</p>
 </footer>
 </body>
 </html>

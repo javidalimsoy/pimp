@@ -2,37 +2,96 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     color: #333;
-}
-
-/* Header */
-header {
-    background-color: #000;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 1.5em;
+    background-color: #f9f9f9;
+    scroll-behavior: smooth;
 }
 
 /* Navigation Bar */
 nav {
-    background-color: #111;
+    background-color: #000;
     padding: 10px 0;
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding: 10px 20px;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #555;
+    background-color: #444;
+}
+
+.auth-button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background-color: #f8c300;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #d4a300;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../images/hero-banner.png');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align text to the right */
+    padding-right: 50px; /* Space from the right edge */
+    color: #fff;
+    text-align: right;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #f8c300;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #d4a300;
 }
 
 /* Container */
@@ -41,40 +100,50 @@ nav a:hover {
     margin: 20px auto;
     padding: 20px;
     background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Product Grid */
-.product-grid {
+/* Featured Products */
+.featured-products {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
 }
 
-.product {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    width: 250px;
+.featured-product {
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    width: calc(25% - 20px); /* Four products per row with space between */
+    box-sizing: border-box;
 }
 
-.product img {
+.featured-product img {
     max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
-.product button {
-    margin-top: 10px;
+.featured-product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Table */
+.featured-product h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.featured-product p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Table Styles (Cart, Order History, etc.) */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -87,37 +156,32 @@ table th, table td {
     border: 1px solid #ddd;
 }
 
-.order {
-    background: #fff;
-    border: 1px solid #ddd;
+table th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.order h3 {
-    margin-top: 0;
+button:hover {
+    background-color: #444;
 }
-
-.order ul {
-    list-style: none;
-    padding: 0;
-}
-
-.order ul li {
-    margin-bottom: 5px;
-}
-
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #111;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 15px 0;
+    background-color: #000;
+    color: #fff;
+    margin-top: 20px;
 }
-
