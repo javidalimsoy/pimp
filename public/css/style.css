@@ -79,3 +79,33 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Product Grid */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px; /* Optional for rounded corners */
+    background-color: transparent; /* Ensures no background issues for PNG transparency */
+}
+
+.product button {
+    margin-top: 10px;
+}
