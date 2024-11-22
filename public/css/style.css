@@ -45,41 +45,6 @@ nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Forms */
-form input, form select, form textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #111;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
 /* Product Grid */
 .product-grid {
     display: flex;
@@ -102,10 +67,33 @@ footer {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    border-radius: 5px; /* Optional for rounded corners */
-    background-color: transparent; /* Ensures no background issues for PNG transparency */
+    border-radius: 5px;
 }
 
 .product button {
     margin-top: 10px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #111;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

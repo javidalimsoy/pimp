@@ -1,4 +1,3 @@
-<?php include '../src/db.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +13,7 @@
 <nav>
     <a href="index.php">Home</a>
     <a href="products.php">Products</a>
-    <a href="login.php">Login</a>
-    <a href="register.php">Register</a>
+    <a href="cart.php">Cart</a>
 </nav>
 <div class="container">
     <h2>Discover Luxury Watches</h2>

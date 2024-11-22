@@ -28,7 +28,7 @@ include '../src/db.php'; ?>
                     <h3>{$row['name']}</h3>
                     <p>{$row['description']}</p>
                     <p><strong>\${$row['price']}</strong></p>
-                    <form action='cart.php' method='POST'>
+                    <form action='../src/cart.php' method='POST'>
                         <input type='hidden' name='product_id' value='{$row['id']}'>
                         <button type='submit'>Add to Cart</button>
                     </form>
